@@ -290,11 +290,11 @@ def view_worlds():
 
     if not worlds:
         print("No worlds to view. Go add one!")
-    
-    worlds_list = worlds
-    
-    for world in worlds_list:
-        print(f"{world['Name']}, \n{world['Description']}, \n{world['Key_1']}, \n{world['Key_2']}, \n{world['Key_3']}")
+    else:
+        worlds_list = worlds
+        
+        for world in worlds_list:
+            print(f"{world['Name']}, \n{world['Description']}, \n{world['Key_1']}, \n{world['Key_2']}, \n{world['Key_3']}")
     
 
 def view_single_world():
@@ -302,12 +302,16 @@ def view_single_world():
 
     if not worlds:
         print("No worlds to view. Go add one!")
-    
-    world_name = input("Enter the name of the world you like to view: ")
+    else:
+        print("Your list of worlds: ")
+        for world in worlds:
+            print(world['Name'])
+            
+        world_name = input("Enter the name of the world you like to view: ")
 
-    for world in worlds:
-        if world['Name'] == world_name:
-            print(f"{world['Name']}, \n{world['Description']}, \n{world['Key_1']}, \n{world['Key_2']}, \n{world['Key_3']}")
+        for world in worlds:
+            if world['Name'] == world_name:
+                print(f"{world['Name']}, \n{world['Description']}, \n{world['Key_1']}, \n{world['Key_2']}, \n{world['Key_3']}")
 
 def edit_world():
     worlds = load_worlds()
