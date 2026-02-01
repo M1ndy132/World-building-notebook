@@ -312,7 +312,9 @@ def view_single_world():
         for world in worlds:
             if world['Name'] == world_name:
                 print(f"{world['Name']}, \n{world['Description']}, \n{world['Key_1']}, \n{world['Key_2']}, \n{world['Key_3']}")
-
+            else:
+                print(f"Could not find world named {world_name}.")
+                
 def edit_world():
     worlds = load_worlds()
 
