@@ -1,19 +1,4 @@
 # Word-building Notebook
-"""- **WEEK 7: World-Building Notebook**
-**Constraints:**
-- Use ONLY: JSON, dictionaries, `open()`
-- Store: name, description, 3 key features
-- No images or maps
-- No linking between worlds
-- No categories or tags
-- Single JSON file
-
-**Requirements:**
-- Add world with 3 features
-- List all worlds
-- View single world details
-- Save automatically"""
-
 import json
 
 def load_worlds():
@@ -57,7 +42,7 @@ def add_world():
             continue
         else:
             break
-        
+
     key_feat_2 = input("Enter the second key feature of your world: ").strip()
     key_feat_3 = input("Enter the third key feature of your world: ").strip()
 
